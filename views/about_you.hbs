@@ -1,25 +1,26 @@
 <div class="jumbotron">
   <form method="post" action="/forms/about_you">
     <div class="section-heading">Tell us a little about yourself</div>
-    <div class="question">How much money do you have in your checking and savings account?
-         <input name="accountBalance" type="text"></input>
+    <div class="question row">
+         <div class="col-sm-4">How much money do you have in your checking and savings account?</div>
+         <div class="col-sm-4" ><input name="accountBalance" type="text"></input></div>
     </div>
-    <div class="question">
-      How much money do you spend every month?
-      <input name="monthlyExpenses" type="text"></input>
+    <div class="question row">
+      <div class="col-sm-4">How much money do you spend every month?</div>
+      <div class="col-sm-4"><input name="monthlyExpenses" type="text"></input></div>
     </div>
-    <div class="question">
-      If you have credit card debt, what is your monthly payment?
-      <input name="creditCardMonthlyPayment" type="text"></input>
+    <div class="question row">
+      <div class="col-sm-4">If you have credit card debt, what is your monthly payment?</div>
+      <div class="col-sm-4"><input name="creditCardMonthlyPayment" type="text"></input></div>
     </div>
-    <div class="question">
-      If you have student debt, what is your monthly payment?
-      <input name="studentDebtMonthlyPayment" type="text"></input>
+    <div class="question row">
+      <div class="col-sm-4">If you have student debt, what is your monthly payment?</div>
+      <div class="col-sm-4"><input name="studentDebtMonthlyPayment" type="text"></input></div>
     </div>
-    <div class="question">
-      Do you contribute to a 401(k) plan every month?
-      <input type="radio" name="hasRetirementAccount">Yes</input>
-      <input type="radio" name="hasRetirementAccount">No</input>
+    <div class="question row">
+      <div class="col-sm-4">Do you contribute to a 401(k) plan every month?</div>
+      <div class="col-sm-4"><input type="radio" name="hasRetirementAccount">Yes</input>
+      <input type="radio" name="hasRetirementAccount">No</input></div>
     </div>
     <div class="nav-button"><button type="submit" class="button center">Next</button>
     </div>
