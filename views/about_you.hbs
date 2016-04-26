@@ -19,10 +19,17 @@
     </div>
     <div class="question row">
       <div class="col-sm-4">Do you contribute to a 401(k) plan every month?</div>
-      <div class="col-sm-4"><input type="radio" name="hasRetirementAccount">Yes</input>
-      <input type="radio" name="hasRetirementAccount">No</input></div>
+      <div class="col-sm-4"><input type="checkbox" name="hasRetirementAccount"></input></div>
     </div>
     <div class="nav-button"><button type="submit" class="button center">Next</button>
     </div>
   </form>
 </div>
+
+<script type="text/javascript">
+  $.fn.bootstrapSwitch.defaults.onText = 'Yes';
+  $.fn.bootstrapSwitch.defaults.offText = 'No';
+  $.fn.bootstrapSwitch.defaults.onColor = '#333333';
+  $("[name='hasRetirementAccount']").bootstrapSwitch();
+
+</script>
