@@ -84,9 +84,13 @@ header, body, html {
 }
 
 .navbar-toggle {
-  margin-right: 30px;
+  margin-right: 35px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #31979a;
+  background-color: #31979a;
+}
+
+.row {
+  margin-right: 0px;
 }
