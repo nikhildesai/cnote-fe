@@ -3,22 +3,18 @@
   margin-left: 10px;
 }
 
-.section-heading {
-  font-size: x-large;
-  margin-bottom: 20px;
-}
-
-.section {
-  margin-top: 20px;
-}
-
 .question {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: auto;
+  color: grey;
+  padding: 5px;
+}
+
+.row {
+  margin-right: 0px;
 }
 
 .button {
-  background-color: slategrey;
+  background-color: #31979a;;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -43,6 +39,34 @@
   background-color: #31979a;
 }
 
+.heading {
+  color: #31979a;
+  width: inherit;
+  text-align: center;  
+}
+
+.sub-heading-descriptive {
+  color:  grey;
+  width: inherit;
+  text-align: center;
+  font-size: large;
+  padding: 20px;
+}
+
+.sub-heading-short {
+  color: #31979a;
+  width: inherit;
+  text-align: center;
+  font-size: x-large;
+}
+
+.questions {
+   margin-left: 10px;
+   margin-right: 10px;
+   text-align: center;
+}
+
+/** LP styles */
 .img-responsive {
   margin: 0px auto;
   display:block;
@@ -60,12 +84,11 @@
   color: white;
 }
 
+/** End LP styles **/
+
+/** Nav bar styles  **/
 .navbar {
   background-color: #fbfbfb;
-}
-
-header, body, html {
-  height: 100%;
 }
 
 .navbar-separator {
@@ -91,6 +114,10 @@ header, body, html {
   background-color: #31979a;
 }
 
-.row {
-  margin-right: 0px;
+/** End nav bar styles**/
+
+/** Common styles **/
+header, body, html {
+  height: 100%;
 }
+

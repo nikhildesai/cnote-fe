@@ -1,28 +1,35 @@
-<div class="jumbotron">
+<div class="container">
   <form method="post" action="/forms/about_you">
-    <div class="section-heading">Tell us a little about yourself</div>
-    <div class="question row">
-         <div class="col-sm-4">How much money do you have in your checking and savings account?</div>
-         <div class="col-sm-4" ><input name="accountBalance" type="text"></input></div>
+    <h2 class="heading">Am I Ok Financially?</h2>
+    <div class="sub-heading-descriptive">Isn't that the big question? We wondered why we can't get a simple, straight-forward answer without reading a tomb ...or paying some dude. So here it is.</div>
+    <div class="sub-heading-short">You asked, we delivered</div>
+    <br>
+    <div class="questions">
+      <div class="question row">
+           <div class="col-md-8">How much money do you have in your checking and savings account?</div>
+           <div class="col-md-4" ><input name="accountBalance" type="text"></input></div>
+      </div>
+      <div class="question row">
+        <div class="col-md-8">How much money do you spend every month?</div>
+        <div class="col-md-4"><input name="monthlyExpenses" type="text"></input></div>
+      </div>
+      <div class="question row">
+        <div class="col-md-8">If you have credit card debt, what is your monthly payment?</div>
+        <div class="col-md-4"><input name="creditCardMonthlyPayment" type="text"></input></div>
+      </div>
+      <div class="question row">
+        <div class="col-md-8">If you have student debt, what is your monthly payment?</div>
+        <div class="col-md-4"><input name="studentDebtMonthlyPayment" type="text"></input></div>
+      </div>
+      <div class="question row">
+        <div class="col-md-8">Do you contribute to a 401(k) plan every month?</div>
+        <div class="col-md-4"><input type="checkbox" name="hasRetirementAccount"></input></div>
+      </div>
+      <br>
+      <div class="nav-button"><button type="submit" class="button center">Next</button>
+      </div>
     </div>
-    <div class="question row">
-      <div class="col-sm-4">How much money do you spend every month?</div>
-      <div class="col-sm-4"><input name="monthlyExpenses" type="text"></input></div>
-    </div>
-    <div class="question row">
-      <div class="col-sm-4">If you have credit card debt, what is your monthly payment?</div>
-      <div class="col-sm-4"><input name="creditCardMonthlyPayment" type="text"></input></div>
-    </div>
-    <div class="question row">
-      <div class="col-sm-4">If you have student debt, what is your monthly payment?</div>
-      <div class="col-sm-4"><input name="studentDebtMonthlyPayment" type="text"></input></div>
-    </div>
-    <div class="question row">
-      <div class="col-sm-4">Do you contribute to a 401(k) plan every month?</div>
-      <div class="col-sm-4"><input type="checkbox" name="hasRetirementAccount"></input></div>
-    </div>
-    <div class="nav-button"><button type="submit" class="button center">Next</button>
-    </div>
+    <div class="sub-heading-descriptive">Most importantly, rest assured that your info will always be safe, secure and <b>100% confidential</b></div>
   </form>
 </div>
 
