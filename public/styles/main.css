@@ -61,9 +61,13 @@
 }
 
 .questions {
-   margin-left: 10px;
-   margin-right: 10px;
-   text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: center;
+  padding: 5px;
+  background-color: #fbfbfb;
 }
 
 /** LP styles */
