@@ -11,15 +11,21 @@
 .question {
   margin: auto;
   color: grey;
-  padding: 5px;
+  padding: 10px;
+  min-wdith: 200px;
 }
 
-.row {
-  margin-right: 0px;
+.question-answer-column {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  max-width: 300px;
+  min-wdith: 100px;
+  margin-left: 10px;
 }
 
 .button {
-  background-color: #31979a;;
+  background-color: #31979a;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -27,6 +33,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 5px;
 }
 
 .center {
@@ -128,5 +135,8 @@
 /** Common styles **/
 header, body, html {
   height: 100%;
+}
+.row {
+  margin-right: 0px;
 }
 

@@ -5,25 +5,25 @@
     <div class="sub-heading-short">You asked, we delivered</div>
     <br>
     <div class="questions">
-      <div class="question row">
-           <div class="col-md-8">How much money-input do you have in your checking and savings account?</div>
-           <div class="col-md-4" ><input class="money-input" name="accountBalance" type="text"></input></div>
+      <div class="question">
+           <div class="question-answer-column">How much money-input do you have in your checking and savings account?</div>
+           <div class="question-answer-column" >$<input class="money-input" name="accountBalance" type="text"></input></div>
       </div>
-      <div class="question row">
-        <div class="col-md-8">How much money-input do you spend every month?</div>
-        <div class="col-md-4"><input class="money-input" name="monthlyExpenses" type="text"></input></div>
+      <div class="question  ">
+        <div class="question-answer-column">How much money-input do you spend every month?</div>
+        <div class="question-answer-column">$<input class="money-input" name="monthlyExpenses" type="text"></input></div>
       </div>
-      <div class="question row">
-        <div class="col-md-8">If you have credit card debt, what is your monthly payment?</div>
-        <div class="col-md-4"><input class="money-input" name="creditCardMonthlyPayment" type="text"></input></div>
+      <div class="question  ">
+        <div class="question-answer-column">If you have credit card debt, what is your monthly payment?</div>
+        <div class="question-answer-column">$<input class="money-input" name="creditCardMonthlyPayment" type="text"></input></div>
       </div>
-      <div class="question row">
-        <div class="col-md-8">If you have student debt, what is your monthly payment?</div>
-        <div class="col-md-4"><input class="money-input" name="studentDebtMonthlyPayment" type="text"></input></div>
+      <div class="question  ">
+        <div class="question-answer-column">If you have student debt, what is your monthly payment?</div>
+        <div class="question-answer-column">$<input class="money-input" name="studentDebtMonthlyPayment" type="text"></input></div>
       </div>
-      <div class="question row">
-        <div class="col-md-8">Do you contribute to a 401(k) plan every month?</div>
-        <div class="col-md-4"><input type="checkbox" name="hasRetirementAccount"></input></div>
+      <div class="question  ">
+        <div class="question-answer-column">Do you contribute to a 401(k) plan every month?</div>
+        <div class="question-answer-column"><input type="checkbox" name="hasRetirementAccount"></input></div>
       </div>
       <br>
       <div class="nav-button"><button type="submit" class="button center">Next</button>
@@ -36,7 +36,7 @@
 <script type="text/javascript">
   $.fn.bootstrapSwitch.defaults.onText = 'Yes';
   $.fn.bootstrapSwitch.defaults.offText = 'No';
-  $.fn.bootstrapSwitch.defaults.onColor = '#333333';
+  $.fn.bootstrapSwitch.defaults.onColor = 'default';
   $("[name='hasRetirementAccount']").bootstrapSwitch();
 
 </script>
