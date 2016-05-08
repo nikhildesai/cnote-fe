@@ -6,14 +6,6 @@ router.use(function(req, res, next) {
 });
 
 router.get('/', function(req, res) {
-  res.redirect('/pages/home'); 
-});
-
-router.get('/pages/home', function(req, res) {
-  res.render('home');
-});
-
-router.get('/pages/about_you', function(req, res) {
   res.render('about_you');
 });
 

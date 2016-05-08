@@ -1,3 +1,17 @@
+<div id="overlay-container">
+  <header class="turqoise-bg overlay">
+    <div class="turqoise-bg container">
+      <div class="row">
+         <div class="col-lg-12">
+           <a href="/pages/about_you"><img class="img-responsive" src="/images/cnote_landing_page.png" alt=""></a>
+           <div class="sub-text-lp">
+             <span class="sub-text-lp">Finance for the rest of us</span>
+           </div>
+         </div>
+       </div>
+     </div>
+  </header>
+</div>
 <div class="container">
   <form method="post" action="/forms/about_you">
     <h2 class="heading">Am I Ok Financially?</h2>
@@ -38,4 +52,10 @@
   $.fn.bootstrapSwitch.defaults.offText = 'No';
   $.fn.bootstrapSwitch.defaults.onColor = 'default';
   $("[name='hasRetirementAccount']").bootstrapSwitch();
+ 
+  // hide the overlay 
+  setTimeout(function() {
+    $('#overlay-container').fadeOut('slow');
+    console.log('hide');
+  }, 3000);  
 </script>
