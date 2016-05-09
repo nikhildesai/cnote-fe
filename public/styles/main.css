@@ -38,23 +38,25 @@
 
 .money-input {
   border-radius: 5px;
-  max-width: 100px;
+  width: 70px;
+  height: 36px;
+  font-size: 18px;
 }
 
 .question {
   margin: auto;
   color: grey;
-  padding: 10px;
-  min-wdith: 200px;
+  padding-top: 5px;
 }
 
 .question-answer-column {
   display: inline-block;
   vertical-align: middle;
   float: none;
-  max-width: 300px;
+  max-width: 200px;
   min-wdith: 100px;
-  margin-left: 10px;
+  margin-left: 0px;
+  padding: 5px;
 }
 
 .button {
@@ -73,11 +75,13 @@
   margin: auto;
   width: 70%;
   padding: 10px;
+  text-align: center;
 }
 
 .container {
   padding-left: 0px;
   padding-right: 0px;
+  padding-top: 20px;
 }
 
 .heading {
@@ -92,6 +96,8 @@
   text-align: center;
   font-size: large;
   padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .sub-heading-short {
@@ -102,13 +108,18 @@
 }
 
 .questions {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   padding: 5px;
   background-color: #fbfbfb;
+  height: 280px;
+  overflow-y: scroll;
+  border-radius: 10px;
+  padding: 10px;
+  border-style: ridge;
 }
 
 /** LP styles */
@@ -176,9 +187,11 @@ header, body, html {
 .row {
   position: relative;
   top: 50%;
-  transform: translateY(40%);
+  transform: translateY(30%);
 }
 
 body {
+  border-style: solid;
   font-family: MuseoSans-500;
+  overflow: scroll;
 }
