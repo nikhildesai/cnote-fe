@@ -5,6 +5,10 @@
   height: 100%;
   left: 0;
   top: 0;
+  background: -webkit-radial-gradient(#aaaaaa, #31979a); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#999999, #31979a); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#999999, #31979a); /* For Fx 3.6 to 15 */
+  background: radial-gradient(#999999, #31979a); /* Standard syntax (must be last) */
 }
 
 .monthly-payment-banner {
@@ -35,11 +39,6 @@
 .money-input {
   border-radius: 5px;
   max-width: 100px;
-}
-
-.cnote-logo {
-  float: left;
-  margin-left: 10px;
 }
 
 .question {
@@ -81,10 +80,6 @@
   padding-right: 0px;
 }
 
-.turqoise-bg {
-  background-color: #31979a;
-}
-
 .heading {
   color: #31979a;
   width: inherit;
@@ -120,9 +115,16 @@
 .img-responsive {
   margin: 0px auto;
   display:block;
-  max-width: 300px;
-  margin-top: 51px;
-  margin-bottom: 20px; 
+  max-width: 260px;
+}
+
+.logo-text-lp {
+  margin: 0px auto;
+  display:block;
+  text-align: center;
+  font-size: 54px;
+  font-weight: lighter;
+  color: white;
 }
 
 .sub-text-lp {
@@ -130,7 +132,7 @@
   display:block;
   text-align: center;
   font-size: 24px;
-  font-family: sans-serif;
+  font-weight: lighter;
   color: white;
 }
 
@@ -170,7 +172,13 @@
 header, body, html {
   height: 100%;
 }
+
 .row {
-  margin-right: 0px;
+  position: relative;
+  top: 50%;
+  transform: translateY(40%);
 }
 
+body {
+  font-family: MuseoSans-500;
+}

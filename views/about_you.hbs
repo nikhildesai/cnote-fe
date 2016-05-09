@@ -1,11 +1,12 @@
 <div id="overlay-container">
-  <header class="turqoise-bg overlay">
-    <div class="turqoise-bg container">
+  <header class="overlay">
+    <div class="container">
       <div class="row">
          <div class="col-lg-12">
-           <a href="/pages/about_you"><img class="img-responsive" src="/images/cnote_landing_page.png" alt=""></a>
+           <img class="img-responsive" src="/images/cnote_landing_page.png" alt="">
+           <div class="logo-text-lp">CNote</div>
            <div class="sub-text-lp">
-             <span class="sub-text-lp">Finance for the rest of us</span>
+             <span class="sub-text-lp">Finance for the Rest of Us</span>
            </div>
          </div>
        </div>
@@ -58,4 +59,8 @@
     $('#overlay-container').fadeOut('slow');
     console.log('hide');
   }, 3000);  
+
+  // hide the menu bar for now
+  $('#menu').hide();
+  $('.nav-bar-separator').hide();
 </script>
