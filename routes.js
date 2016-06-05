@@ -9,26 +9,17 @@ router.get('/', function(req, res) {
   res.render('about_you');
 });
 
-router.post('/forms/about_you', function(req, res) {
-  console.log('account balance=' + req.body.accountBalance);
-  console.log('monthly expenses=' + req.body.monthlyExpenses);
-  console.log('credit card payment=' + req.body.creditCardMonthlyPayment);
-  console.log('student debt payment=' + req.body.studentDebtMonthlyPayment);
-  console.log('has retirement? ' + req.body.hasRetirementAccount);
-  var calculatedYearlyAmount;
-  if (req.body.accountBalance) {
-    var intRate=5; //hard-coded for now    
-    calculatedYearlyAmount = parseFloat((req.body.accountBalance*intRate*1)/100).toFixed(2); // 1 year
+router.post('/sign_up', function(req, res) {
+  console.log('Email=' + req.body.inputEmail);
+
+  if (!!!req.body.inputEmail) {
+    res.render('about_you', {'error': 'Please enter a valid email'});
+    return;    
   }
-  res.render('offer', 
-    { 'accountBalance': req.body.accountBalance, 
-      'calculatedYearlyAmount': calculatedYearlyAmount
+  res.render('about_you', 
+    { 'success': 'Thanks for signing up! We will be in touch shortly!' 
     }
   );
-});
-
-router.get('/pages/offer', function(req, res) {
-  res.redirect('/pages/about_you');
 });
 
 module.exports.router = router;

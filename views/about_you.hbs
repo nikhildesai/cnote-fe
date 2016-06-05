@@ -1,4 +1,4 @@
-<div id="overlay-container">
+<div id="overlay-container" style="display: none">
   <header class="overlay">
     <div class="container">
       <div class="row">
@@ -14,45 +14,26 @@
   </header>
 </div>
 <div class="container">
-  <form method="post" action="/forms/about_you">
-    <h2 class="heading">Am I Ok Financially?</h2>
-    <div class="sub-heading-descriptive">Isn't that the big question? We wondered why we can't get a simple, straight-forward answer without reading a tomb ...or paying some dude. So here it is.</div>
-    <div class="sub-heading-short">You asked, we delivered</div>
-    <div class="questions">
-      <div class="question">
-           <div class="question-answer-column">How much money-input do you have in your checking and savings account?</div>
-           <div class="question-answer-column" >$&nbsp;<input class="money-input" name="accountBalance" type="text"></input></div>
-      </div>
-      <div class="question">
-        <div class="question-answer-column">How much money-input do you spend every month?</div>
-        <div class="question-answer-column">$&nbsp;<input class="money-input" name="monthlyExpenses" type="text"></input></div>
-      </div>
-      <div class="question">
-        <div class="question-answer-column">If you have credit card debt, what is your monthly payment?</div>
-        <div class="question-answer-column">$&nbsp;<input class="money-input" name="creditCardMonthlyPayment" type="text"></input></div>
-      </div>
-      <div class="question  ">
-        <div class="question-answer-column">If you have student debt, what is your monthly payment?</div>
-        <div class="question-answer-column">$&nbsp;<input class="money-input" name="studentDebtMonthlyPayment" type="text"></input></div>
-      </div>
-      <div class="question  ">
-        <div class="question-answer-column">Do you contribute to a 401(k) plan every month?</div>
-        <div class="question-answer-column"><input type="checkbox" name="hasRetirementAccount"></input></div>
-      </div>
+  <br>
+  <br>
+  <form method="post" action="/sign_up">
+    <h2 class="heading">Earn Account @ CNote</h2>
+    <div class="sub-heading-descriptive">Earn 5x more than your Savings by investing in local businesses</div>
+    <div class="sub-heading-short">We believe in simplicity, transparency and community</div>
       <br>
-      <div class="nav-button"><button type="submit" class="button center">Next</button>
-      </div>
+
+    <div class="sub-heading-descriptive-small">We are doing a closed beta!</div>
+    <div class="nav-button center">
+        <fieldset class="form-group">
+          <input type="email" class="email-input" name="inputEmail"  id="inputEmail" placeholder="Enter email to sign up">
+          <button type="submit" class="button btn">Go!</button> 
+       </fieldset>
+       <!-- <button type="submit" class="button center">Next</button></div> -->
     </div>
-    <div class="sub-heading-descriptive">Most importantly, rest assured that your info will always be safe, secure and <b>100% confidential</b></div>
   </form>
 </div>
 
 <script type="text/javascript">
-  $.fn.bootstrapSwitch.defaults.onText = 'Yes';
-  $.fn.bootstrapSwitch.defaults.offText = 'No';
-  $.fn.bootstrapSwitch.defaults.onColor = 'default';
-  $("[name='hasRetirementAccount']").bootstrapSwitch();
- 
   // hide the overlay 
   setTimeout(function() {
     $('#overlay-container').fadeOut('slow');

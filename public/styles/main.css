@@ -36,6 +36,14 @@
   font-size: large;
 }
 
+.email-input {
+  width: 240px;
+  height: 36px;
+  font-size: 18px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
 .money-input {
   border-radius: 5px;
   width: 70px;
@@ -61,19 +69,17 @@
 
 .button {
   background-color: #31979a;
-  border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 5px;
+  height: 36px;
 }
 
 .center {
   margin: auto;
-  width: 70%;
   padding: 10px;
   text-align: center;
 }
@@ -88,13 +94,14 @@
   color: #31979a;
   width: inherit;
   text-align: center;  
+  font-size: 24px;
 }
 
 .sub-heading-descriptive {
   color:  grey;
   width: inherit;
   text-align: center;
-  font-size: large;
+  font-size: xx-large;
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -105,6 +112,17 @@
   width: inherit;
   text-align: center;
   font-size: x-large;
+}
+
+.sub-heading-descriptive-small {
+  color:  grey;
+  width: inherit;
+  text-align: center;
+  font-size: large;
+  font-style: italic;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .questions {
@@ -150,8 +168,15 @@
 /** End LP styles **/
 
 /** Nav bar styles  **/
+.nav {
+  color: #31979a;
+}
+
 .navbar {
+  padding-left: 10px;
   background-color: #fbfbfb;
+  color: #31979a;
+  font-size: large;
 }
 
 .navbar-separator {
@@ -177,6 +202,10 @@
   background-color: #31979a;
 }
 
+.nav-text {
+  color: #31979a;
+}
+
 /** End nav bar styles**/
 
 /** Common styles **/
@@ -191,7 +220,10 @@ header, body, html {
 }
 
 body {
-  border-style: solid;
   font-family: MuseoSans-500;
   overflow: scroll;
+}
+
+.alert {
+  text-align: center;
 }
