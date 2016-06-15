@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Museo Sans 500';
+  font-style:  normal;
+  font-weight: 400;
+  src: url(../fonts/MuseoSans-500.otf) format('woff2');
+}
+
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 870px;
+    }
+}
+
+
+body {
+	background: #fbfbfb;
+	font-family: 'Museo Sans 500', sans-serif;
+}
+.gray {
+	color: #54555c;
+}
+.logo img {
+	
+}
+.logo {
+    text-align: center;
+	margin-top: 5%;
+}
+
+.info {
+	text-align: center;		
+	font-size: 5vh;
+	margin-top:10%;
+}
+.text {
+	font-size: 3vh;
+	text-align: center;	
+	margin-top:20px;
+}
+
+.add-email input {
+	border-radius: 40px;	
+	padding:20px;
+	border: 2px solid #31979a;
+	margin-bottom: 17px;
+	margin-top: 10%;
+	height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 2.5vh;		
+    background: #fafafa;	
+	width: 100%;
+}
+
+button.waitlist {
+	color:white;
+	background: #31979a;
+	border:none;
+	box-shadow: none;
+	border-radius: 40px;	
+	height: 50px;
+    box-sizing: border-box;
+    font-size: 2.5vh;
+	width: 100%;
+}
+
+.bottomtext {
+	margin-top: 15%;
+}
+
+.navigation{
+ 	background-color: #31979a;
+}
+.nav>li>a {s
+	padding: 10px 0px;
+}
+.navigation ul {
+	padding:0;
+}
+.navigation ul li a {
+	color:  white;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 28px;
+	text-transform: uppercase;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	background-color: white;
+	color: #54555c;
+}
+
+
+@media (max-width: 768px) { 
+	.nav-tabs {
+		display: none;
+	}
+	nav .navbar-toggle {
+	    background: transparent;
+	    color: white;
+	    box-shadow: none;
+	    text-align: center;
+	    float: none;
+	    cursor: pointer;
+	}
+	.navbar-toggle .icon-bar {
+		background: white;
+		height: 5px;
+		width: 40px;
+	}
+	.navbar-toggle {
+		text-align: center;
+		//float:none;
+	    margin: auto;
+	}
+}
+
+
+input::-webkit-input-placeholder {color:#31979a;}
+input::-moz-placeholder          {color:#31979a;}
+input:-moz-placeholder           {color:#31979a;}
+input:-ms-input-placeholder      {color:#31979a;}
+
+
+
