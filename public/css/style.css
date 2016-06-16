@@ -15,7 +15,7 @@
 
 body {
 	background: #fbfbfb;
-	font-family: 'Museo Sans 500', sans-serif;
+	font-family: 'Museo Sans 500', sans-serif;	
 }
 .gray {
 	color: #54555c;
@@ -27,11 +27,12 @@ body {
     text-align: center;
 	margin-top: 5%;
 }
-
+ 
 .info {
-	text-align: center;		
-	font-size: 5vh;
-	margin-top:10%;
+	text-align: center;			
+	//font-size: 4.7vh;
+	font-size: calc(16px + 1.8vh);	 	
+	margin-top:7%;
 }
 .text {
 	font-size: 3vh;
@@ -48,7 +49,8 @@ body {
 	height: 50px;
     box-sizing: border-box;
     text-align: center;
-    font-size: 2.5vh;		
+    //font-size: 2.5vh;
+	font-size: calc(12px + 0.7vh);	 		
     background: #fafafa;	
 	width: 100%;
 }
@@ -56,17 +58,20 @@ body {
 button.waitlist {
 	color:white;
 	background: #31979a;
-	border:none;
+	border:none;	
+	outline:none;
 	box-shadow: none;
 	border-radius: 40px;	
 	height: 50px;
     box-sizing: border-box;
-    font-size: 2.5vh;
+    //font-size: 2.5vh;
+	font-size: calc(12px + 0.7vh);	 		
 	width: 100%;
 }
 
 .bottomtext {
 	margin-top: 15%;
+	font-size: calc(16px + 0.7vh);	 
 }
 
 .navigation{
@@ -117,10 +122,43 @@ button.waitlist {
 }
 
 
-input::-webkit-input-placeholder {color:#31979a;}
-input::-moz-placeholder          {color:#31979a;}
-input:-moz-placeholder           {color:#31979a;}
-input:-ms-input-placeholder      {color:#31979a;}
+
+.form-control::-moz-placeholder {
+  color: #31979a;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #31979a;
+}
+.form-control::-webkit-input-placeholder {
+  color: #31979a;
+}
+
+ div.flyingpig {
+    -webkit-transform: translate(1500px,-200px);
+    -moz-transform: translate(1500px,-200px);
+    -o-transform: translate(1500px,-200px);
+    -ms-transform: translate(1500px,-200px);
+    transform: translate(1500px,-200px);
+	
+	-webkit-transition: 5s ease-in-out;
+    -moz-transition: 5s ease-in-out;
+    -o-transition: 5s ease-in-out;
+    transition: 5s ease-in-out;
+}
+
+div.flyingpig div {
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    transform: rotate(50deg);
+	
+	 -webkit-transition: 2s ease-in-out;
+    -moz-transition: 2s ease-in-out;
+    -o-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
+}
 
 
 
