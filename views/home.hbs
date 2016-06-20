@@ -13,9 +13,12 @@
             <div class="info">Earn 5x more than your Savings Account. Seriously.</div>
         </div>
     </div>
+
     <div class="row controls">
+
         <div class="col-md-6 col-md-offset-3">
-            <input type="text" class="form-control" placeholder="My email">
+            <p id="invalidEmailError" class="alert alert-warning">Please enter a valid email</p>
+            <input type="text" name="userEmail" class="form-control" placeholder="My email">
         </div>
         <div class="col-md-6 col-md-offset-3">
             <button id="waitlist" type="button" class="form-control actionBtn">Get me on the waitlist</button>
@@ -47,7 +50,8 @@
         </div>
         <div class="row controls">
             <div class="col-md-6 col-md-offset-3">
-                <input type="text" class="form-control" placeholder="Your friend email"/>
+                <p id="invalidFriendEmailError" class="alert alert-warning">Please enter a valid email</p>
+                <input type="text" name="friendEmail" class="form-control" placeholder="Your friend email"/>
             </div>
             <div class="col-md-6 col-md-offset-3">
                 <textarea rows="3" type="text" class="form-control"
@@ -63,7 +67,7 @@
 <div class="page3">
     <div class="row">
         <div class="page3-logo img-responsive">
-            <img src="/images/logo-company3.png" class="test" width="80%" height="80%"/>
+            <img src="/images/logo-company3.png" class="test" width="60%" height="60%"/>
         </div>
     </div>
     <div class="row">
@@ -76,16 +80,52 @@
 
 <script>
     var pigTimerVar = null;
-
+    var myEmail;
     $(document).ready(function(){
+
+        // User sign up
         $("#waitlist").click(function(){
-            $(".page1").fadeOut("slow");
-            $(".page2").delay(1000).fadeIn("slow");
+            var inputUserEmail = $("[name=userEmail]").val();
+            var data = {
+                email: inputUserEmail
+            };
+            var req = {
+                    type: "POST",
+                    url: "/sign_up",
+                    data: JSON.stringify(data),
+                    success: userEmailSuccess,
+                    error: userEmailErrorCallback,
+                    contentType: "application/json; charset=utf-8"
+                };
+            if (!!inputUserEmail) {
+                $.ajax(req);
+            } else {
+                $("#invalidEmailError").show();
+            }
+            myEmail = inputUserEmail;
         });
+
+        // Friend sign up
         $("#blastOff").click(function(){
-            $(".page2-main").fadeOut(1000);
-            $("#pig").addClass("flyingpig");
-            pigTimerVar = setInterval( function(){ pigTimer() }, 250);
+            var friendEmail = $("[name=friendEmail]").val();
+
+            var data = {
+                friendEmail: friendEmail,
+                referrerEmail: myEmail
+            };
+            var req = {
+                type: "POST",
+                url: "/friend_sign_up",
+                data: JSON.stringify(data),
+                success: friendEmailSuccess,
+                error: friendEmailErrorCallback,
+                contentType: "application/json; charset=utf-8"
+            };
+            if (!!friendEmail) {
+                $.ajax(req);
+            } else {
+                $("#invalidFriendEmailError").show();
+            }
         });
     });
 
@@ -93,12 +133,31 @@
         if (!$('.flyingpig').isOnScreen(0.01, 0.01)) {
             clearInterval(pigTimerVar);
             $("#pig").fadeOut();
-
-
             $("body").css("overflow-y", "hidden");
             $(".page3").delay(250).addClass("backgroundAnimated");
             $(".page3").delay(250).fadeIn(3000);
         }
+    };
+
+    function userEmailSuccess() {
+        $(".page1").fadeOut("slow");
+        $(".page2").delay(1000).fadeIn("slow");
+
+    };
+
+    function userEmailErrorCallback() {
+        $("#invalidEmailError").show();
+    };
+
+    function friendEmailSuccess() {
+        $(".page2-main").fadeOut(1000);
+        $("#pig").addClass("flyingpig");
+        pigTimerVar = setInterval( function(){ pigTimer() }, 250);
+    };
+
+    function friendEmailErrorCallback() {
+        console.log('friendEmailError');
+        $("#invalidFriendEmailError").show();
     };
 
 </script>

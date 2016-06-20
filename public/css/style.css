@@ -284,6 +284,11 @@ div.flyingpig div {
         transition: background 3s linear;	
 }
 
+.alert {
+    display: none;
+    text-align: center;
+}
+
 
 
 

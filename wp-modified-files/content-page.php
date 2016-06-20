@@ -15,7 +15,7 @@
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content" style="width: 90%;display: block; margin: auto;">
 		<?php
 		the_content();
 
@@ -43,4 +43,3 @@
 	?>
 
 </article><!-- #post-## -->
-

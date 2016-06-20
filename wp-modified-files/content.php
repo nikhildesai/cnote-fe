@@ -21,7 +21,7 @@
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content" style="margin: auto; display:block; width: 90%;">
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
@@ -55,4 +55,3 @@
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-
