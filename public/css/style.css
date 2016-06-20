@@ -5,123 +5,77 @@
   src: url(../fonts/MuseoSans-500.otf) format('woff2');
 }
 
-
-@media (min-width: 1200px) {
-    .container{
-        max-width: 870px;
-    }
-}
-
-
 body {
 	background: #fbfbfb;
 	font-family: 'Museo Sans 500', sans-serif;	
+	overflow-x: hidden;	
+    height: 100%;
 }
-.gray {
-	color: #54555c;
+
+html {
+	height: 100%;
 }
-.logo img {
-	
+
+.container {
+	height: 100%;
 }
+
+
+.navbar {
+ 	background-color: #fbfbfb;
+	border: 0px;	
+}
+
+.navbar ul li a {
+	color:  #31979a;
+	font-size: 14px;
+	font-weight: 600;	
+	text-transform: uppercase;
+	border-bottom: 3px solid transparent;
+}
+
+.navbar-default {
+	margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #31979a;
+	text-align: center;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #54555c;	
+    background-color: rgba(230, 230, 230, 0.8);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #31979a;	
+	height: 5px;
+	width: 40px;
+}
+
+.navbar-default .navbar-toggle,  .navbar-default .navbar-toggle:hover {
+	border-color: transparent;	
+	background: transparent;	
+}
+
+
+
+.logo-container {
+	height: 20%;
+}
+
 .logo {
     text-align: center;
 	margin-top: 5%;
 }
- 
+
 .info {
-	text-align: center;			
-	//font-size: 4.7vh;
+	text-align: center;				
 	font-size: calc(16px + 1.8vh);	 	
-	margin-top:7%;
+	margin-top: 0px;
+	color: #54555c;	
 }
-.text {
-	font-size: 3vh;
-	text-align: center;	
-	margin-top:20px;
-}
-
-.add-email input {
-	border-radius: 40px;	
-	padding:20px;
-	border: 2px solid #31979a;
-	margin-bottom: 17px;
-	margin-top: 10%;
-	height: 50px;
-    box-sizing: border-box;
-    text-align: center;
-    //font-size: 2.5vh;
-	font-size: calc(12px + 0.7vh);	 		
-    background: #fafafa;	
-	width: 100%;
-}
-
-button.waitlist {
-	color:white;
-	background: #31979a;
-	border:none;	
-	outline:none;
-	box-shadow: none;
-	border-radius: 40px;	
-	height: 50px;
-    box-sizing: border-box;
-    //font-size: 2.5vh;
-	font-size: calc(12px + 0.7vh);	 		
-	width: 100%;
-}
-
-.bottomtext {
-	margin-top: 15%;
-	font-size: calc(16px + 0.7vh);	 
-}
-
-.navigation{
- 	background-color: #31979a;
-}
-.nav>li>a {s
-	padding: 10px 0px;
-}
-.navigation ul {
-	padding:0;
-}
-.navigation ul li a {
-	color:  white;
-	font-size: 14px;
-	font-weight: 600;
-	line-height: 28px;
-	text-transform: uppercase;
-}
-
-.nav>li>a:hover, .nav>li>a:focus {
-	background-color: white;
-	color: #54555c;
-}
-
-
-@media (max-width: 768px) { 
-	.nav-tabs {
-		display: none;
-	}
-	nav .navbar-toggle {
-	    background: transparent;
-	    color: white;
-	    box-shadow: none;
-	    text-align: center;
-	    float: none;
-	    cursor: pointer;
-	}
-	.navbar-toggle .icon-bar {
-		background: white;
-		height: 5px;
-		width: 40px;
-	}
-	.navbar-toggle {
-		text-align: center;
-		//float:none;
-	    margin: auto;
-	}
-}
-
-
 
 .form-control::-moz-placeholder {
   color: #31979a;
@@ -134,7 +88,168 @@ button.waitlist {
   color: #31979a;
 }
 
- div.flyingpig {
+
+.controls {	
+    padding-left: 15px;	
+	padding-right: 15px;	
+}
+
+.controls input {
+	border-radius: 5px;		
+	border: 2px solid #31979a;
+	margin-bottom: 3%;
+	margin-top: 5%;
+	height: 50px;
+    box-sizing: border-box;
+    text-align: center;    
+	font-size: calc(12px + 0.7vh);	 		
+    background: #fafafa;	
+	width: 100%;    
+}
+
+.controls textarea {
+	margin-bottom: 3%;
+	border: 2px solid #31979a;
+	border-radius: 5px;	
+    padding: 10px 10px 10px 15px;
+	resize: none;
+	overflow:hidden;
+	font-size: calc(12px + 0.7vh);	
+}
+
+.controls .actionBtn {
+	color:white;
+	background: #31979a;
+	border:none;	
+	outline:none;
+	box-shadow: none;
+	border-radius: 5px;	
+	height: 50px;
+    box-sizing: border-box;    
+	font-size: calc(12px + 0.7vh);	 		
+	width: 100%;
+}
+
+//.controls .blastOffBtn {
+//	text-align: center;
+//	padding-left: 20%;
+//	padding-right: 20%;
+//}
+
+
+.blastOffBtn {
+    font-size: calc(28px + 0.7vh);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 19px -1px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 2px 19px -1px rgba(0,0,0,0.7);
+    box-shadow: 0px 2px 19px -1px rgba(0,0,0,0.7);
+    height: 70px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.27), 0 0 1em rgba(252, 248, 227, 0.5);
+    margin-bottom: 20px;
+    color: white;
+    border: none;
+    box-sizing: border-box;
+    background: rgb(156, 51, 49);
+    background: -webkit-linear-gradient(180deg, rgb(156, 51, 49) 75%, rgb(142, 42, 39) 94%);
+    background: -o-linear-gradient(180deg, rgb(156, 51, 49) 75%, rgb(142, 42, 39) 94%);
+    background: -ms-linear-gradient(180deg, rgb(156, 51, 49) 75%, rgb(142, 42, 39) 94%);
+    background: linear-gradient(180deg, rgb(156, 51, 49) 75%, rgb(142, 42, 39) 94%);
+}
+
+
+.bottomtext {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	font-size: calc(16px + 0.7vh);	 
+	text-align: center;	
+	color: #54555c;	
+}
+
+
+
+.page3-logo {
+	text-align: center;	
+	margin-top: 15%;
+}
+
+.page3-text {
+	text-align: center;				
+	font-size: calc(16px + 2.5vh);	 	
+	margin-top: 0px;
+	//color: #54555c;	
+	color: #fbfbfb;	
+}
+
+.page3  {
+	//background: #31979a;
+	height: 85%;	
+}
+
+
+.page2, .page3 {
+	display: none;
+}
+
+
+@media (min-width: 768px) { 
+    .container{
+        max-width: 670px;
+    }
+	
+	.navbar-brand  img {
+		height: 50px;				
+	}
+	
+	.navbar .nav > li > a {
+		line-height: 50px;		
+	}
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 870px;
+    }
+	.navbar-brand  {
+		padding-top: 0px;		
+	}
+	.navbar-brand  img {
+		height: 70px;	
+		padding-top: 0px;		
+	}
+}
+
+@media (max-width: 767px) { 
+	.navbar-brand  {
+		padding-top: 0px;
+	}
+	.navbar-brand  img {
+		height: 60px;	
+		padding-top: 0px;		
+	}
+}
+
+@media (max-width: 480px) { 
+	.navbar-brand  {
+		padding-top: 5px;
+	}
+	.navbar-brand  img {
+		height: 50px;				
+		padding-top: 0px;
+	}	
+	.navbar {
+		margin-bottom: 0px;
+		//height: 50px;				
+	}	
+	.page3-logo {		
+		margin-top: 25%;
+	}
+}
+
+
+div.flyingpig {
     -webkit-transform: translate(1500px,-200px);
     -moz-transform: translate(1500px,-200px);
     -o-transform: translate(1500px,-200px);
@@ -146,7 +261,6 @@ button.waitlist {
     -o-transition: 5s ease-in-out;
     transition: 5s ease-in-out;
 }
-
 div.flyingpig div {
     -webkit-transform: rotate(50deg);
     -moz-transform: rotate(50deg);
@@ -159,6 +273,17 @@ div.flyingpig div {
     -o-transition: 2s ease-in-out;
     transition: 2s ease-in-out;
 }
+
+
+.backgroundAnimated {
+	background-color: #31979a;	
+    -webkit-transition: background 3s linear;
+        -moz-transition: background 3s linear;
+        -ms-transition: background 3s linear;
+        -o-transition: background 3s linear;
+        transition: background 3s linear;	
+}
+
 
 
 

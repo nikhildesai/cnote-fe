@@ -1,28 +1,105 @@
-<div class="container page">
-  <div class="col-md-12">
+<div class="page1">
     <div class="row">
-                                        <div class="logo img-responsive">
-                                                <div>
-                                                        <img src="images/logo_large.jpg" alt="" width="50%" height="50%">          
-                                                </div>
-                                        </div>
-                                <div class="col-md-12">
-                                  <div id="info" class="info gray">Earn 5x more than your Saving&nbsp;Account. Seriously.</div>
-                                </div>
-                                <form method="post" action="/sign_up">
-                                  <div class="add-email">
-                                        <div class="col-md-6 col-md-offset-3">
-                                          <input name="inputEmail" id="email" type="text" class="form-control" placeholder="Enter your email">       
-                                        </div>
-                                        <div class="col-md-6 col-md-offset-3">
-                                          <button class="waitlist">&nbsp;Get me on the waitlist&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></button>
-                                        </div>
-                                  </div>
-                                </form>
-                                <div class="col-md-12">
-                                  <div class="text bottomtext gray">Simple. Transparent. Easy.</div>
-                                </div>
-                          </div>
+        <div class="logo-container">
+            <div class="logo img-responsive">
+                <div>
+                    <img src="/images/flying-pig.png" alt="" width="50%" height="50%">
                 </div>
+            </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="info">Earn 5x more than your Savings Account. Seriously.</div>
+        </div>
+    </div>
+    <div class="row controls">
+        <div class="col-md-6 col-md-offset-3">
+            <input type="text" class="form-control" placeholder="My email">
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <button id="waitlist" type="button" class="form-control actionBtn">Get me on the waitlist</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bottomtext">Simple. Transparent. Easy.</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="page2">
+    <div class="row">
+        <div class="logo-container">
+            <div id="pig" class="logo img-responsive">
+                <div>
+                    <img src="/images/flying-pig.png" alt="" width="50%" height="50%">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page2-main">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="info">Wanna launch the pig? Share with a friend.</div>
+            </div>
+        </div>
+        <div class="row controls">
+            <div class="col-md-6 col-md-offset-3">
+                <input type="text" class="form-control" placeholder="Your friend email"/>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <textarea rows="3" type="text" class="form-control"
+                          placeholder="Check this out. Alternative to a savings account - makes you 5% verses 0%. #betterbacon"></textarea>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <button id="blastOff" class="blastOffBtn">Blast Off</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page3">
+    <div class="row">
+        <div class="page3-logo img-responsive">
+            <img src="/images/logo-company3.png" class="test" width="80%" height="80%"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page3-text">Welcome to CNote</div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var pigTimerVar = null;
+
+    $(document).ready(function(){
+        $("#waitlist").click(function(){
+            $(".page1").fadeOut("slow");
+            $(".page2").delay(1000).fadeIn("slow");
+        });
+        $("#blastOff").click(function(){
+            $(".page2-main").fadeOut(1000);
+            $("#pig").addClass("flyingpig");
+            pigTimerVar = setInterval( function(){ pigTimer() }, 250);
+        });
+    });
+
+    function pigTimer() {
+        if (!$('.flyingpig').isOnScreen(0.01, 0.01)) {
+            clearInterval(pigTimerVar);
+            $("#pig").fadeOut();
+
+
+            $("body").css("overflow-y", "hidden");
+            $(".page3").delay(250).addClass("backgroundAnimated");
+            $(".page3").delay(250).fadeIn(3000);
+        }
+    };
+
+</script>
 
